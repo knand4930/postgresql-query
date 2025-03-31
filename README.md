@@ -229,5 +229,3 @@ PostgreSQL - CREATE INDEX
 PostgreSQL - List Indexes
 
 PostgreSQL - UNIQUE Index
-
-rewrite all query with short explaination
