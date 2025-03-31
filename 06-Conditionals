@@ -1,7 +1,9 @@
 # PostgreSQL Conditionals and Functions
 
+PostgreSQL provides powerful conditional expressions and functions to enhance query capabilities. Below are some essential ones:
+
 ## 1. CASE Statement
-The `CASE` statement allows conditional logic in SQL queries.
+The `CASE` statement allows conditional logic within SQL queries.
 
 ### Example:
 ```sql
@@ -13,36 +15,36 @@ SELECT id, name,
     END AS salary_category
 FROM employees;
 ```
-**Explanation:** This query categorizes employees' salaries into 'High', 'Medium', or 'Low' based on their values.
+**Explanation:** This query classifies employees' salaries into 'High', 'Medium', or 'Low' based on the amount.
 
 ---
 
 ## 2. COALESCE Function
-The `COALESCE` function returns the first non-null value from a list of expressions.
+The `COALESCE` function returns the first non-null value from a list of provided expressions.
 
 ### Example:
 ```sql
 SELECT id, name, COALESCE(phone, 'No Phone Available') AS contact_info
 FROM customers;
 ```
-**Explanation:** If `phone` is `NULL`, it replaces it with 'No Phone Available'.
+**Explanation:** If the `phone` field is `NULL`, it is replaced with 'No Phone Available'.
 
 ---
 
 ## 3. NULLIF() Function
-The `NULLIF()` function returns `NULL` if two values are equal; otherwise, it returns the first value.
+The `NULLIF()` function returns `NULL` if two provided values are equal; otherwise, it returns the first value.
 
 ### Example:
 ```sql
 SELECT NULLIF(100, 100) AS result; -- Returns NULL
 SELECT NULLIF(100, 50) AS result; -- Returns 100
 ```
-**Explanation:** If both values are equal, `NULLIF()` returns `NULL`, otherwise it returns the first value.
+**Explanation:** If both values match, `NULLIF()` returns `NULL`; otherwise, it returns the first value.
 
 ---
 
 ## 4. CAST Function
-The `CAST` function is used to convert one data type into another.
+The `CAST` function converts a value from one data type to another.
 
 ### Example:
 ```sql
@@ -51,4 +53,7 @@ SELECT CAST('123' AS INTEGER) AS converted_value;
 ```
 **Explanation:** Converts the string `'123'` into an integer.
 
+---
+
+These functions and expressions provide greater flexibility in handling data within PostgreSQL queries.
 
