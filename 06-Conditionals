@@ -51,6 +51,4 @@ SELECT CAST('123' AS INTEGER) AS converted_value;
 ```
 **Explanation:** Converts the string `'123'` into an integer.
 
----
 
-These functions help handle conditional logic, null values, and type conversions efficiently in PostgreSQL.
